@@ -15,20 +15,24 @@ The project directory structure is as follows:
 sacumen-project/
 │
 ├── file_uploader/
-│ ├── init.py
+│ ├── __init__.py
 │ └── file_uploader.py
+│
+├── constants/
+│ ├── __init__.py
+│ ├── credentials_constant.py
+│ └── constants.py
 │
 ├── main.py
 ├── .env
 ├── requirements.txt
-└── credentials_constant.py
 ```
 
 - **`file_uploader/`**: Contains the `file_uploader.py` module responsible for uploading files to AWS S3 and GCS.
+- **`constants/`**: Contains configuration files including `credentials_constant.py` for environment variable management and `constants.py` for additional constants.
 - **`main.py`**: The main script that initiates the file upload process.
 - **`.env`**: File for storing environment variables.
 - **`requirements.txt`**: Lists the Python dependencies required for the project.
-- **`credentials_constant.py`**: Loads environment variables and provides access to configuration values.
 
 
 ## Installation and Setup
