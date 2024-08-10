@@ -1,5 +1,7 @@
 from file_uploader.file_uploader import FileUploader
-from credentials_constant import DirectoryPath, AWSCredentials, GCSCredentials
+from constants.credentials_constant import DirectoryPath, AWSCredentials, GCSCredentials
+from constants.constants import RequiredUploadTypesForCloud as Types
+
 
 if __name__ == "__main__":
     uploader = FileUploader(
@@ -12,6 +14,6 @@ if __name__ == "__main__":
 
     uploader.upload_files(
         directory=DirectoryPath.DIRECTORY_PATH,
-        s3_types=['jpg', 'jpeg', 'png', 'svg', 'webp', 'mp3', 'mp4', 'mpeg4', 'wmv', '3gp', 'webm'],
-        gcs_types=['doc', 'docx', 'csv', 'pdf']
+        s3_types=Types.S3_TYPES,
+        gcs_types=Types.GCS_TYPES
     )
